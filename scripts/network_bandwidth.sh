@@ -2,8 +2,9 @@
 
 INTERVAL="1"  # update interval in seconds
 
-network_name=$(tmux show-option -gqv "@dracula-network-bandwidth")
-
+# network_name=$(tmux show-option -gqv "@dracula-network-bandwidth")
+network_name=$(ip -4 route ls  |awk '/^default/{print $5}' | head -n 1)
+echo $network_name
 main() {
   while true
   do
