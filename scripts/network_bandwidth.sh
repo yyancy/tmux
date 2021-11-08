@@ -46,7 +46,7 @@ main() {
       output_upload_unit="kB/s"
     fi
 
-    echo "↓ $output_download $output_download_unit • ↑ $output_upload $output_upload_unit"
+    echo "↓$output_download$output_download_unit • ↑$output_upload$output_upload_unit"
   done
 }
 main
